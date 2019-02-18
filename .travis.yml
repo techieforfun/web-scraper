@@ -1,0 +1,21 @@
+os:
+  - linux
+
+language: php
+
+php:
+  - '7.2'
+
+before_install:
+  - cp .env.example .env
+  - composer self-update
+  - composer install --prefer-source --no-interaction
+  - mysql -e 'CREATE DATABASE web_scraper CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;'
+  - php artisan key:generate
+  - php artisan migrate
+  - php artisan config:clear
+  - php artisan db:seed
+  - phpenv rehash
+
+script:
+  - vendor/bin/phpunit -c phpunit.xml --coverage-text
