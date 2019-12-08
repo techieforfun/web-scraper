@@ -1,5 +1,5 @@
 <p align="center">
-[![Build Status](https://travis-ci.org/TechieForFun/web-scraper.svg?branch=master)](https://travis-ci.org/TechieForFun/web-scraper)
+<a href="https://travis-ci.org/TechieForFun/web-scraper"><img src="https://travis-ci.org/TechieForFun/web-scraper.svg" alt="Build Status"></a>
 </p>
 
 # Web Scraper
